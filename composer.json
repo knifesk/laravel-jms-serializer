@@ -1,0 +1,39 @@
+{
+    "name": "knifesk/laravel-jms-serializer",
+    "description": "An updated JMSSerializer integration package for Laravel and Lumen",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martín Oyola",
+            "email": "knifesk@gmail.com"
+        }
+    ],
+    "require": {
+        "jms/serializer": "3.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5",
+        "orchestra/testbench": "3.8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "KnF\\LaravelJmsSerializer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KnF\\LaravelJmsSerializer\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel":  {
+            "providers": [
+                "KnF\\LaravelJmsSerializer\\Providers\\JMSSerializerServiceProvider"
+            ],
+            "aliases": {
+                "Serializer": "KnF\\LaravelJmsSerializer\\Facades\\Serializer"
+            }
+        }
+    }
+}
