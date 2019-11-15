@@ -63,6 +63,7 @@ class JMSSerializerServiceProvider extends ServiceProvider
         $defaultHandlers = config('serializer.default_handlers');
         if ($defaultHandlers) {
             $builder->addDefaultHandlers();
+            $builder->addDefaultListeners();
         }
 
         $handlers = config('serializer.handlers');
